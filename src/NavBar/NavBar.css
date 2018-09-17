@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css?family=Euphoria+Script|Mr+De+Haviland");
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script");
+@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
+
+.navbar {
+  display: flex;
+  text-align: center;
+  background-color: rgba(249, 250, 206, 0.904);
+  color: rgb(36, 100, 28);
+  position: sticky;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+  font-family: "PT Sans Caption", sans-serif;
+}
+
+#nav-left {
+  display: flex;
+  height: 93px;
+  width: 30%;
+  color: white;
+}
+
+.title {
+  display: flex;
+  width: 180px;
+  text-align: left;
+  font-family: "Dancing Script", cursive;
+}
+
+.nav-logo {
+  height: 6rem;
+  width: 6rem;
+}
+.sr {
+  font-size: 40px;
+  color: rgb(51, 145, 51);
+  margin: 0px;
+  padding-top: 40px;
+}
+
+.tn {
+  font-size: 40px;
+  color: rgb(21, 24, 9);
+  margin: 0px;
+  padding-top: 40px;
+  padding-left: 5px;
+}
+
+#nav-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 93px;
+  width: 100%;
+}
+
+.bande-haut {
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+}
+
+#search {
+  display: flex;
+  width: 400px;
+}
+
+.search {
+  display: flex;
+  width: 300px;
+  position: relative;
+  padding: 1px;
+  border: 1px solid grey;
+}
+
+*:focus {
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  border: none;
+  height: 27px;
+  color: rgb(143, 137, 137);
+  background-color: white;
+  padding: 0px 5px;
+}
+.search_input {
+  border: none;
+  width: 100%;
+  font-family: "Gloria Hallelujah", cursive, serif;
+  font-size: 15px;
+  padding-left: 33px;
+}
+
+.search-button-div {
+  width: 100px;
+}
+.search-button {
+  width: 100%;
+  height: 100%;
+  border: 0.5px solid grey;
+  background-color: #209b49;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 15px;
+  padding: 0px;
+  font-family: "Gloria Hallelujah", cursive, serif;
+  cursor: pointer;
+}
+
+.menu-utilitaires {
+  vertical-align: middle;
+  font-family: "Gloria Hallelujah", cursive, serif;
+}
+#menu-utilitaires {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0px 15px;
+  transition: transform 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.hello{
+  width:200px;
+  height: 200px;
+  border: 2px solid gold;
+}
+
+a {
+  color: rgb(21, 24, 9);
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(90, 28, 47) !important;
+}
+
+li:hover {
+  transform: scale(1.2);
+}
+
+#menu-principal {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  padding: 0;
+  font-size: 15px;
+  text-transform: uppercase;
+  background-color: white;
+  font-weight: bold;
+  height: 40px;
+}
+
+#decoration-1 {
+  top: 0;
+  left: -13px;
+  border-left: 13px solid transparent;
+  border-top: 16px solid #fff;
+  position: absolute;
+}
+#decoration-2 {
+  bottom: 0;
+  left: -13px;
+  border-left: 13px solid transparent;
+  border-bottom: 16px solid #fff;
+  position: absolute;
+}
+
+#decoration-3 {
+  top: 1px;
+  transform: rotate(90deg);
+  right: -18px;
+  border-left: 20px solid transparent;
+  border-bottom: 16px solid #fff;
+  position: absolute;
+}
+
+#decoration-4 {
+  bottom: 0;
+  transform: rotate(180deg);
+  right: -18px;
+  border-left: 19px solid transparent;
+  border-bottom: 21px solid #fff;
+  position: absolute;
+}
+#menu-principal > li {
+  letter-spacing: 0.4px;
+  width: 220px;
+  margin: 0px;
+  text-align: center;
+}
+
+#menu-principal > li > div {
+  display: block;
+  line-height: 40px;
+}
+
+#menu-principal > li:hover > ul {
+  max-height: 300px;
+  padding: 5px 5px;
+}
+
+.show {
+  display: block;
+}
+
+.menu:hover {
+  text-decoration: none;
+}
