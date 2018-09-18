@@ -9,10 +9,11 @@ import {
   Mask,
   Container
 } from "mdbreact";
+
 class CarouselPage extends Component {
   render() {
     return (
-      <Container>
+      <Container className="container-carousel">
         <Carousel
           activeItem={1}
           length={3}
@@ -21,6 +22,7 @@ class CarouselPage extends Component {
           className="z-depth-1"
         >
           <CarouselInner>
+            <div className="back-gray" />
             <CarouselItem itemId="1">
               <View>
                 <img
@@ -45,12 +47,13 @@ class CarouselPage extends Component {
               <View>
                 <img
                   className="d-block w-100"
-                  src="/perfect.png"
+                  src="/LE TROC (1).png"
                   alt="Third slide"
                 />
                 <Mask overlay="black-slight" />
               </View>
             </CarouselItem>
+            <div className="back-gray" />
           </CarouselInner>
         </Carousel>
       </Container>

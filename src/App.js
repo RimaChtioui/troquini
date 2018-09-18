@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import NavBar from "./NavBar/NavBar.js";
-import CarouselPage from "./Carousel/Carousel.js";
+import FullPageIntroWithFixedTransparentNavbar from "./NavBar2/NavBar2.js";
+import CommentCaMarche from "./CommentCaMarche/CommentCaMarche";
 
 class App extends Component {
   render() {
     return (
       <div>
-        <NavBar />
-        <CarouselPage />
+        <FullPageIntroWithFixedTransparentNavbar />
+        <CommentCaMarche />
       </div>
     );
   }
