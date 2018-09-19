@@ -1,79 +1,63 @@
-@import url("https://fonts.googleapis.com/css?family=Euphoria+Script|Mr+De+Haviland");
 @import url("https://fonts.googleapis.com/css?family=Dancing+Script");
-@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah");
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
+@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah");
 
 .navbar {
-  display: flex;
-  text-align: center;
-  background-color: rgba(249, 250, 206, 0.904);
-  color: rgb(36, 100, 28);
-  position: sticky;
+  background-color: transparent;
+  z-index: 1;
+  position: absolute !important;
   top: 0;
-  margin: 0;
-  padding: 0;
-  z-index: 100;
-  font-family: "PT Sans Caption", sans-serif;
-}
-
-#nav-left {
-  display: flex;
-  height: 93px;
-  width: 30%;
-  color: white;
-}
-
-.title {
-  display: flex;
-  width: 180px;
-  text-align: left;
-  font-family: "Dancing Script", cursive;
-}
-
-.nav-logo {
-  height: 6rem;
-  width: 6rem;
-}
-.sr {
-  font-size: 40px;
-  color: rgb(51, 145, 51);
-  margin: 0px;
-  padding-top: 40px;
-}
-
-.tn {
-  font-size: 40px;
-  color: rgb(21, 24, 9);
-  margin: 0px;
-  padding-top: 40px;
-  padding-left: 5px;
-}
-
-#nav-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 93px;
+  left: 0;
   width: 100%;
 }
+.fixed-top {
+  position: fixed !important;
+}
 
+.navbar a {
+  color: white !important;
+  font-weight: bold;
+}
+.top-nav-collapse {
+  background-color: rgba(27, 178, 216, 0.95);
+  color: white;
+}
+@media only screen and (max-width: 768px) {
+  .navbar {
+    background-color: rgba(27, 178, 216, 0.95);
+  }
+}
+
+.navbar-brand {
+  font-family: "Dancing Script", cursive !important;
+  font-size: 40px !important;
+}
+
+.back-up {
+  background-color: #9e9e9e;
+  height: 94px;
+}
 .bande-haut {
   display: flex;
   justify-content: space-between;
   height: 30px;
 }
-
 #search {
   display: flex;
-  width: 400px;
+  justify-content: flex-start;
+  width: 500px;
+  padding-left: 45px;
 }
 
 .search {
   display: flex;
-  width: 300px;
+  width: 250px;
   position: relative;
   padding: 1px;
-  border: 1px solid grey;
+  border-bottom: 1px solid white;
+}
+.svg-inline--fa.fa-w-16 {
+  width: 1.5em !important;
 }
 
 *:focus {
@@ -83,136 +67,99 @@
 .search-icon {
   position: absolute;
   border: none;
-  height: 27px;
-  color: rgb(143, 137, 137);
-  background-color: white;
+  width: 30px;
+  height: 20px;
+  color: white;
+  background: transparent;
   padding: 0px 5px;
 }
 .search_input {
   border: none;
   width: 100%;
   font-family: "Gloria Hallelujah", cursive, serif;
-  font-size: 15px;
-  padding-left: 33px;
+  font-size: 13px;
+  padding-left: 35px;
+  background: transparent;
+  color: white;
 }
 
-.search-button-div {
-  width: 100px;
-}
-.search-button {
-  width: 100%;
-  height: 100%;
-  border: 0.5px solid grey;
-  background-color: #209b49;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  font-size: 15px;
-  padding: 0px;
-  font-family: "Gloria Hallelujah", cursive, serif;
-  cursor: pointer;
+::placeholder {
+  color: white;
 }
 
 .menu-utilitaires {
-  vertical-align: middle;
-  font-family: "Gloria Hallelujah", cursive, serif;
-}
-#menu-utilitaires {
   display: flex;
   justify-content: space-between;
-  font-size: 15px;
+  vertical-align: middle;
+  width: 280px;
+}
+.log-button {
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 12px;
+  border-radius: 6px;
+  background: white;
+  width: 120px;
+  color: rgba(0, 146, 181, 0.95);
+  height: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.5s !important;
+  transition-timing-function: ease-in-out !important;
+}
+.sign-button {
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 12px;
+  border-radius: 6px;
+  background: transparent;
+  width: 150px;
+  height: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  transition: transform 1s !important;
+  transition-timing-function: ease-in-out !important;
+}
+*:focus {
+  outline: none !important;
 }
 
 ul,
 li {
   list-style: none;
   margin: 0px 15px;
-  transition: transform 0.5s;
-  transition-timing-function: ease-in-out;
 }
 
-.hello{
-  width:200px;
-  height: 200px;
-  border: 2px solid gold;
-}
-
-a {
-  color: rgb(21, 24, 9);
-  text-decoration: none;
-}
-a:hover {
-  color: rgb(90, 28, 47) !important;
-}
-
-li:hover {
-  transform: scale(1.2);
-}
-
-#menu-principal {
-  display: flex;
-  justify-content: space-around;
-  position: relative;
-  padding: 0;
-  font-size: 15px;
+.menu {
   text-transform: uppercase;
-  background-color: white;
-  font-weight: bold;
-  height: 40px;
-}
-
-#decoration-1 {
-  top: 0;
-  left: -13px;
-  border-left: 13px solid transparent;
-  border-top: 16px solid #fff;
-  position: absolute;
-}
-#decoration-2 {
-  bottom: 0;
-  left: -13px;
-  border-left: 13px solid transparent;
-  border-bottom: 16px solid #fff;
-  position: absolute;
-}
-
-#decoration-3 {
-  top: 1px;
-  transform: rotate(90deg);
-  right: -18px;
-  border-left: 20px solid transparent;
-  border-bottom: 16px solid #fff;
-  position: absolute;
-}
-
-#decoration-4 {
-  bottom: 0;
-  transform: rotate(180deg);
-  right: -18px;
-  border-left: 19px solid transparent;
-  border-bottom: 21px solid #fff;
-  position: absolute;
-}
-#menu-principal > li {
-  letter-spacing: 0.4px;
-  width: 220px;
-  margin: 0px;
-  text-align: center;
-}
-
-#menu-principal > li > div {
-  display: block;
-  line-height: 40px;
-}
-
-#menu-principal > li:hover > ul {
-  max-height: 300px;
-  padding: 5px 5px;
-}
-
-.show {
-  display: block;
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 12px;
+  transition: transform 1s !important;
+  transition-timing-function: ease-in-out !important;
 }
 
 .menu:hover {
-  text-decoration: none;
+  transform: scale(1.2) !important;
+  color: rgba(111, 195, 216, 0.95) !important;
+}
+
+.log-button:hover {
+  transform: scale(1.1) !important;
+}
+
+.sign-button:hover {
+  transform: scale(1.1) !important;
+  background: white;
+  color: rgba(0, 146, 181, 0.95);
+}
+
+.navbar-collapse {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.mr-auto,
+.mx-auto {
+  margin-right: 0 !important;
 }

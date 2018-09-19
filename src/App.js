@@ -1,13 +1,17 @@
 import React, { Component } from "react";
-import FullPageIntroWithFixedTransparentNavbar from "./NavBar2/NavBar2.js";
+import NavBar from "./NavBar/NavBar.js";
 import CommentCaMarche from "./CommentCaMarche/CommentCaMarche";
+import LastTrocs from "./LastTrocs/LastTrocs";
+import FooterPage from "./FooterPage/FooterPage";
 
 class App extends Component {
   render() {
     return (
       <div>
-        <FullPageIntroWithFixedTransparentNavbar />
+        <NavBar />
         <CommentCaMarche />
+        <LastTrocs />
+        <FooterPage />
       </div>
     );
   }

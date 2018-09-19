@@ -1,117 +1,119 @@
-import React, { Component } from "react";
+import React from "react";
 import "./NavBar.css";
-import logo from "./logo.png";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
-import CommentCaMarche from "../CommentCaMarche/CommentCaMarche";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarNav,
+  NavbarToggler,
+  Collapse,
+  NavItem,
+  NavLink
+} from "mdbreact";
+import { BrowserRouter as Router } from "react-router-dom";
 
 library.add(faSearch);
 
-class NavBar extends Component {
+class NavBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      collapse: false,
+      isWideEnough: false
+    };
+    this.onClick = this.onClick.bind(this);
+  }
+
+  onClick() {
+    this.setState({
+      collapse: !this.state.collapse
+    });
+  }
   render() {
     return (
-      <Router>
-        <div>
-          <div className="navbar">
-            <div id="nav-left">
-              <div className="logo">
-                <img src={logo} className="nav-logo" alt="logo" />
-              </div>
-              <div className="title">
-                <h1 className="sr">Troquini</h1>
-                <h3 className="tn">.tn</h3>
-              </div>
-            </div>
-            <div id="nav-right">
-              <div className="bande-haut">
-                <div id="search">
-                  <div className="search">
-                    <FontAwesomeIcon className="search-icon" icon="search" />
-                    <input
-                      id="search_input"
-                      className="search_input"
-                      type="search"
-                      placeholder="Que cherchez-vous ?"
-                      autocomplete="off"
-                    />
-                  </div>
-
-                  <div className="search-button-div">
-                    <button class="search-button">Rechercher</button>
-                  </div>
-                </div>
-                <div className="menu-utilitaires">
-                  <ul id="menu-utilitaires">
-                    <li className="lien">
-                      <a href="#">Connection</a>
-                    </li>
-                    <li className="lien">
-                      <a href="#">Inscription</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="bande-bas">
-                <ul id="menu-principal">
-                  <div id="decoration-1" />
-                  <div id="decoration-2" />
-                  <li>
-                    <div
-                      className="comment-ça-marche"
-                      onmouseleave="mouseOut(event)"
-                      onmouseenter="mouseOver(event)"
-                    >
-                      <Link to="/comment-c-m" className="menu">
+      <div>
+        <header>
+          <Router>
+            <div>
+              <img src="/back1.jpg" style={{ width: "100%" }} alt="nav-back" />
+              <Navbar
+                color="transparent"
+                dark
+                expand="md"
+                fixed="top"
+                scrolling
+              >
+                <NavbarBrand href="/">
+                  <strong>Troquini</strong>
+                </NavbarBrand>
+                {!this.state.isWideEnough && (
+                  <NavbarToggler onClick={this.onClick} />
+                )}
+                <Collapse isOpen={this.state.collapse} navbar>
+                  <NavbarNav right className="bande-haut">
+                    <div className="menu-utilitaires">
+                      <button type="button" className="log-button">
+                        Connexion
+                      </button>
+                      <button type="button" className="sign-button">
+                        Inscrivez-vous
+                      </button>
+                    </div>
+                  </NavbarNav>
+                  <NavbarNav left>
+                    <NavItem>
+                      <NavLink className="menu" to="#">
                         Comment ça marche ?
-                      </Link>
-                    </div>
-                  </li>
-                  <li>
-                    <div
-                      className="je-propose"
-                      onmouseleave="mouseOut(event)"
-                      onmouseenter="mouseOver(event)"
-                    >
-                      <a href="#" className="menu">
+                      </NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink className="menu" to="#">
                         Je propose
-                      </a>
-                    </div>
-                  </li>
-                  <li>
-                    <div
-                      className="je-recherche"
-                      onmouseleave="mouseOut(event)"
-                      onmouseenter="mouseOver(event)"
-                    >
-                      <a href="#" className="menu">
+                      </NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink className="menu" to="#">
                         Je recherche
-                      </a>
-                    </div>
-                  </li>
-                  <li>
-                    <div
-                      className="mon-profil"
-                      onmouseleave="mouseOut(event)"
-                      onmouseenter="mouseOver(event)"
-                    >
-                      <a href="#" className="menu">
+                      </NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink className="menu" to="#">
                         Mon Profil
-                      </a>
+                      </NavLink>
+                    </NavItem>
+                    <div id="search">
+                      <div className="searc-container">
+                        <div className="search">
+                          <FontAwesomeIcon
+                            className="search-icon"
+                            icon="search"
+                          />
+                          <input
+                            id="search_input"
+                            className="search_input"
+                            type="search"
+                            placeholder="Que cherchez-vous ?"
+                            autocomplete="off"
+                          />
+                        </div>
+                        <div className="search-area">
+                          <div className="areasearch" style={{}}>
+                            <a href="#" className="block-link">
+                              <span className="search-matched" />
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </li>
-                  <div id="decoration-3" />
-                  <div id="decoration-4" />
-                </ul>
-              </div>
+                  </NavbarNav>
+                </Collapse>
+              </Navbar>
             </div>
-          </div>
-          <div>
-            <Route path="/comment-c-m" component={CommentCaMarche} />
-          </div>
-        </div>
-      </Router>
+          </Router>
+        </header>
+      </div>
     );
   }
 }

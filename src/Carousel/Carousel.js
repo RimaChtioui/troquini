@@ -22,7 +22,6 @@ class CarouselPage extends Component {
           className="z-depth-1"
         >
           <CarouselInner>
-            <div className="back-gray" />
             <CarouselItem itemId="1">
               <View>
                 <img
