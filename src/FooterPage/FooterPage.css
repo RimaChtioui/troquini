@@ -2,5 +2,9 @@
 
 .title {
   font-family: "Dancing Script", cursive !important;
-  font-size: 65px !important;
+  font-size: 45px !important;
+}
+
+.mt-4 {
+  margin-top: -20px !important;
 }

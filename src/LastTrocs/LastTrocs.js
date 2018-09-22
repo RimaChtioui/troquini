@@ -28,7 +28,7 @@ const BlogPage = () => {
             <strong>Je cuisine</strong>
           </h4>
           <p>
-            by <a className="font-weight-bold">Foulen Ben Foulen</a>, 15/07/2018
+            <a className="font-weight-bold">Youssef Chahed</a>, 15/07/2018
           </p>
           <p className="dark-grey-text">
             Je propose de troquer ce livre qui contient 750 recettes contre un
@@ -53,7 +53,7 @@ const BlogPage = () => {
             <strong>Photographe propose book</strong>
           </h4>
           <p>
-            by <a className="font-weight-bold">Foulen Ben Foulen</a>, 13/07/2018
+            <a className="font-weight-bold">Hafedh Caïd Essebsi</a>, 13/07/2018
           </p>
           <p className="dark-grey-text">
             Photographe amateur depuis 15 ans propose book gratuit. Je me
@@ -78,7 +78,7 @@ const BlogPage = () => {
             <strong>Auto-construction et jardin bio</strong>
           </h4>
           <p>
-            by <a className="font-weight-bold">Foulen Ben Foulen</a>, 11/07/2018
+            <a className="font-weight-bold">Foulen Ben Foulen</a>, 11/07/2018
           </p>
           <p className="dark-grey-text">
             Bonjour, j'ai besoin d'une aide pour le jardin bio et un peu de

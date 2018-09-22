@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
+@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah");
+
+.add-troc-container {
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 14px;
+  margin-top: 7rem;
+}
+
+.add-troc-header {
+  margin: 5px !important;
+  padding: 10px !important;
+  justify-content: left;
+}
+.add-troc-footer {
+  margin: 5px !important;
+  padding: 10px !important;
+  justify-content: center;
+}
+.add-troc-body,
+.add-troc-input,
+.select {
+  margin: 5px !important;
+
+  justify-content: flex-start;
+}
+
+.page-title {
+  color: #ebbf6e;
+  font-weight: bold;
+  font-family: "Dancing Script", cursive;
+}
+
+.sub-title {
+  width: 8rem;
+  margin: 0px 0px 15px 0px !important;
+  background: #fadea9;
+  border-radius: 6px;
+  font-family: "PT Sans Caption", sans-serif;
+}
+
+.sub-title-h6 {
+  margin: 5px;
+}
+
+.up-check {
+  margin: 5px 0px 8px 0px !important;
+  width: 80%;
+}
+.down-check {
+  margin: 5px 0px 8px 0px !important;
+  width: 60%;
+}
+.check-input {
+  width: 80px;
+}
+
+.category {
+  margin-top: 30px !important;
+}
+
+.category-selection {
+  border-radius: 3px;
+  height: 30px;
+  margin: 0px !important;
+}
+
+::placeholder {
+  color: grey;
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 12px;
+}
+.label-div,
+.images-block {
+  margin: 15px 0px !important;
+  justify-content: space-around;
+}
+.images-block {
+  text-align: -webkit-center;
+  justify-content: space-around;
+}
+.block {
+  margin-bottom: 10px;
+}
+
+.check-icon {
+  -webkit-appearance: none;
+  background: white;
+  border: 1px solid #ebbf6e;
+  border-radius: 3px;
+  vertical-align: middle;
+  padding: 7px !important;
+  display: inline-block;
+  position: relative;
+}
+
+.check-icon:active,
+.check-icon:checked:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.check-icon:checked {
+  background-color: #f7e5c4;
+  border: 1px solid #fadea9;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05),
+    inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+  color: #fadea9;
+}
+
+.check-icon:checked:after {
+  content: "\2714";
+  font-size: 25px;
+  position: absolute;
+  top: -14px;
+  left: -1px;
+  bottom: 5px;
+  color: #409e1b;
+}
+
+.add-form-input {
+  border-radius: 3px;
+  width: 100%;
+}
+.textarea {
+  border-radius: 3px;
+  width: 100%;
+}
+
+.label-tag {
+  color: grey;
+  font-size: 13px;
+}
+
+.add-button {
+  border-radius: 6px;
+  height: 51px;
+  vertical-align: middle;
+  font-size: 25px;
+  line-height: 0%;
+  font-weight: bold;
+  font-family: "Dancing Script", cursive;
+  text-transform: capitalize;
+  background-color: #ebbf6e;
+  color: rgb(141, 97, 40);
+  cursor: pointer;
+  width: 17rem;
+  letter-spacing: 2px;
+}
+
+.upload-images-block {
+  height: 8rem;
+  width: 8rem;
+  border: 1px solid rgba(140, 141, 138, 0.986);
+  border-radius: 6px;
+  background-color: #fadea9a9;
+}
+.svg-icon {
+  height: 20%;
+  align-self: center;
+  margin-top: 44px;
+}
+.col {
+  padding: 0px !important;
+}

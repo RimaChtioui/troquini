@@ -9,9 +9,7 @@ class FooterPage extends React.Component {
         <Container fluid className="text-center text-md-left">
           <Row className="text-center text-md-left mt-3 pb-3">
             <Col md="3" lg="3" xl="3" className="mx-auto mt-3">
-              <h6 className="text-uppercase mb-4 font-weight-bold title">
-                Troquini.tn
-              </h6>
+              <h6 className="text mb-4 font-weight-bold title">Troquini.tn</h6>
             </Col>
             <hr className="w-100 clearfix d-md-none" />
             <Col md="2" lg="2" xl="2" className="mx-auto mt-3">
