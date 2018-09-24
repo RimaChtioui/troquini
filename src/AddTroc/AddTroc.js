@@ -49,9 +49,9 @@ class AddTroc extends Component {
             <h1 className="page-title">Ajouter un Troc</h1>
           </Row>
           <Row className="add-troc-body add-troc-form">
-            <Col xs="12" sm="12" md="4" lg="4" className="select">
-              <Row className="sub-title">
-                <h6 className="sub-title-h6">Type de Troc</h6>
+            <Col xs="12" sm="12" md="5" lg="5" className="select">
+              <Row className="sub-title bleuet">
+                <h6 className="sub-title-h6 ">Type de Troc</h6>
               </Row>
               <Row className="up-check">
                 <Col xs="12" sm="12" md="6" lg="6" className="check-input">
@@ -103,8 +103,8 @@ class AddTroc extends Component {
                   Service
                 </Col>
               </Row>
-              <Row className="sub-title category">
-                <h6 className="sub-title-h6">Catégories</h6>
+              <Row className="sub-title category magenta">
+                <h6 className="sub-title-h6 ">Catégories</h6>
               </Row>
               <Row className="category-selection">
                 <select>
@@ -116,7 +116,7 @@ class AddTroc extends Component {
               </Row>
             </Col>
             <Col xs="12" sm="12" md="6" lg="6" className="add-troc-input">
-              <Row className="sub-title">
+              <Row className="sub-title gold">
                 <h6 className="sub-title-h6">Annonce</h6>
               </Row>
               <Row className="label-div">

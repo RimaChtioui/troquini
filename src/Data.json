@@ -11,7 +11,12 @@
     "isValidated": false,
     "title": "Je cuisine",
     "dateCreationTroc": "15/07/2018",
-    "userCity": "Beja"
+    "userCity": "Tunis",
+    "postalCode": "1057",
+    "vuesNbre": 20,
+    "userRating": 5,
+    "trocNbre": 3,
+    "userPhoto": "profile.png"
   },
   {
     "id": 2,
@@ -25,7 +30,12 @@
     "isValidated": false,
     "title": "Photographe propose book gratuit",
     "dateCreationTroc": "13/07/2018",
-    "userCity": "Ariana"
+    "userCity": "Ariana",
+    "postalCode": "2037",
+    "vuesNbre": 5,
+    "userRating": 0,
+    "trocNbre": 1,
+    "userPhoto": "profile.png"
   },
   {
     "id": 3,
@@ -39,7 +49,12 @@
     "isValidated": false,
     "title": "Auto-construction et jardin bio",
     "dateCreationTroc": "11/07/2018",
-    "userCity": "Nabeul"
+    "userCity": "Nabeul",
+    "postalCode": "8060",
+    "vuesNbre": 21,
+    "userRating": 2,
+    "trocNbre": 2,
+    "userPhoto": "profile.png"
   },
   {
     "id": 4,
@@ -47,27 +62,37 @@
     "photo": "annonce4.jpg",
     "typeO": "Recherche",
     "typeS": "Service",
-    "userFirstName": "Moncef",
-    "userLastName": "Marzouki",
+    "userFirstName": "Youssef",
+    "userLastName": "Chahed",
     "category": "Vacances/Week-end",
     "isValidated": false,
     "title": "Logement contre cours de tango",
     "dateCreationTroc": "29/06/2018",
-    "userCity": "Medenine"
+    "userCity": "Tunis",
+    "postalCode": "1057",
+    "vuesNbre": 10,
+    "userRating": 5,
+    "trocNbre": 3,
+    "userPhoto": "profile.png"
   },
   {
     "id": 5,
     "description": "Bonjour je souhaiterai savoir si une bonne âme aurait une petite voiture boîte auto à tout petit budjet ou en don je suis sans emploi suite à un problème de santé et j'ai 3 enfants merci d'avance à tous.",
     "photo": "annonce5.jpg",
-    "typeO": "Recherche",
+    "typeO": "Offre",
     "typeS": "Bien",
-    "userFirstName": "Ahmed Nejib",
-    "userLastName": "Chebbi",
+    "userFirstName": "Rached",
+    "userLastName": "Ghannouchi",
     "category": "Transport/Véhicules",
     "isValidated": false,
     "title": "Voiture",
     "dateCreationTroc": "16/05/2018",
-    "userCity": "Jendouba"
+    "userCity": "Nabeul",
+    "postalCode": "8060",
+    "vuesNbre": 21,
+    "userRating": 4,
+    "trocNbre": 2,
+    "userPhoto": "profile.png"
   },
   {
     "id": 6,
@@ -75,12 +100,17 @@
     "photo": "annonce6.jpg",
     "typeO": "Offre",
     "typeS": "Service",
-    "userFirstName": "Yassine",
-    "userLastName": "Ibrahim",
+    "userFirstName": "Youssef",
+    "userLastName": "Chahed",
     "category": "Informatique/Multimédia",
     "isValidated": false,
     "title": "Réalisation de site internet",
     "dateCreationTroc": "28/08/2018",
-    "userCity": "Tunis"
+    "userCity": "Tunis",
+    "postalCode": "1057",
+    "vuesNbre": 13,
+    "userRating": 5,
+    "trocNbre": 3,
+    "userPhoto": "profile.png"
   }
 ]

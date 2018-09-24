@@ -9,19 +9,32 @@
   top: 0;
   left: 0;
   width: 100%;
+  padding: 0rem 1rem !important;
 }
+
 .fixed-top {
   position: fixed !important;
 }
+.center {
+  max-width: 250px;
+}
 
+.right {
+  max-width: 320px;
+}
+.item-1 {
+  margin-left: 24px !important;
+}
+.navbar-nav {
+  padding: 0px !important;
+  margin: 11px 0px !important ;
+  justify-content: space-between;
+}
 .navbar a {
   color: white !important;
   font-weight: bold;
 }
-.top-nav-collapse {
-  background-color: rgba(27, 178, 216, 0.95);
-  color: white;
-}
+
 @media only screen and (max-width: 768px) {
   .navbar {
     background-color: #1bb2d8f2;
@@ -42,18 +55,12 @@
   justify-content: space-between;
   height: 30px;
 }
-#search {
-  display: flex;
-  justify-content: flex-start;
-  width: 500px;
-  padding-left: 45px;
-}
 
 .search {
   display: flex;
   width: 250px;
   position: relative;
-  padding: 1px;
+  padding: 5px;
   border-bottom: 1px solid white;
 }
 .svg-inline--fa.fa-w-16 {
@@ -68,23 +75,24 @@
   position: absolute;
   border: none;
   width: 30px;
-  height: 20px;
+  height: 28px;
   color: white;
   background: transparent;
-  padding: 0px 5px;
+  padding: 0px 4px;
 }
 .search_input {
   border: none;
   width: 100%;
   font-family: "Gloria Hallelujah", cursive, serif;
-  font-size: 13px;
+  font-size: 15px;
   padding-left: 35px;
   background: transparent;
   color: white;
 }
 
 ::placeholder {
-  color: grey;
+  color: rgb(248, 246, 246);
+  font-size: 15px;
 }
 
 .menu-utilitaires {
@@ -92,6 +100,7 @@
   justify-content: space-between;
   vertical-align: middle;
   width: 280px;
+  padding: 5px;
 }
 .log-button {
   font-family: "PT Sans Caption", sans-serif;
@@ -133,14 +142,16 @@ li {
 .menu {
   text-transform: uppercase;
   font-family: "PT Sans Caption", sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   transition: transform 1s !important;
   transition-timing-function: ease-in-out !important;
+  padding: 0px !important;
+  margin: 0px !important;
 }
 
 .menu:hover {
   transform: scale(1.2) !important;
-  color: rgba(111, 195, 216, 0.95) !important;
+  color: #ebbf6e !important;
 }
 
 .log-button:hover {
@@ -155,6 +166,5 @@ li {
 
 .mr-auto,
 .mx-auto {
-  margin-right: 5px !important;
   align-items: space-around !important;
 }
