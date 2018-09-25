@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import Data from "./Data.json";
+import UsersList from "./UsersList.json";
 import HomePage from "./HomePage/HomePage";
+import LogIn from "./LogIn/LogIn";
+import Register from "./Register/Register";
 import CommentCaMarche from "./CommentCaMarche/CommentCaMarche";
 import AddTroc from "./AddTroc/AddTroc";
 import SearchTroc from "./SearchTroc/SearchTroc";
@@ -10,12 +13,12 @@ import NavBar from "./NavBar/NavBar.js";
 import FooterPage from "./FooterPage/FooterPage";
 import TrocDetail from "./TrocDetail/TrocDetail";
 import Message from "./Message/Message";
-import MessageForm from "./MessageForm/MessageForm";
 import EditProfile from "./EditProfile/EditProfile";
 import UserTrocList from "./UserTrocList/UserTrocList";
 
 class App extends Component {
   render() {
+    localStorage.setItem("user_id", "3");
     return (
       <Router>
         <div>
@@ -25,7 +28,7 @@ class App extends Component {
               path="/"
               render={() => (
                 <div>
-                  <NavBar navstyle={"transparent"} />
+                  <NavBar /*navstyle={this.state.color}*/ />
                   <HomePage />
                   <FooterPage />
                 </div>
@@ -35,7 +38,9 @@ class App extends Component {
               path="/"
               render={() => (
                 <div>
-                  <NavBar navstyle={"info-color"} />
+                  <NavBar /*navstyle={this.componentDidMount}*/ />
+                  <Route path="/log-in" component={LogIn} />
+                  <Route path="/register" component={Register} />
                   <Route
                     path="/comment-ca-marche"
                     component={CommentCaMarche}
@@ -46,13 +51,20 @@ class App extends Component {
                     render={() => <SearchTroc trocList={Data} />}
                   />
                   <Route
-                    path="/troc-detail/:id"
+                    path="/troc-detail/:troc_id"
                     render={props => (
-                      <TrocDetail trocList={Data} id={props.match.params.id} />
+                      <TrocDetail
+                        trocList={Data}
+                        id={props.match.params.troc_id}
+                      />
                     )}
                   />
-                  <Route path="/user-profile" component={UserProfile} />
-                  <Route path="/message-form" component={MessageForm} />
+                  <Route
+                    path="/user-profile"
+                    render={() => (
+                      <UserProfile usersList={UsersList} trocList={Data} />
+                    )}
+                  />
                   <Route path="/message" component={Message} />
                   <Route path="/edit-profile" component={EditProfile} />
                   <Route path="/user-troc-list" component={UserTrocList} />

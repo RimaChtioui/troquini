@@ -16,52 +16,15 @@ import {
   DropdownMenu,
   DropdownItem
 } from "mdbreact";
+import { Link } from "react-router-dom";
 
 library.add(faSearch);
-
-class Filters extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleChange = this.handleChange.bind(this);
-  }
-  handleChange(e) {
-    const value = e.target[e.target.type === "checkbox" ? "checked" : "value"];
-    const name = e.target.name;
-    let filterObj = {};
-    filterObj[name] = value;
-    this.props.onFilter(filterObj);
-  }
-  render() {
-    return (
-      <NavbarNav className="center">
-        <NavItem id="search">
-          <div className="searc-container">
-            <div className="search">
-              <FontAwesomeIcon className="search-icon" icon="search" />
-              <input
-                id="search_input"
-                className="search_input"
-                type="search"
-                placeholder="Que cherchez-vous ?"
-                autoComplete="on"
-                value={this.props.filterText}
-                name="filterText"
-                onChange={this.handleChange}
-              />
-            </div>
-          </div>
-        </NavItem>
-      </NavbarNav>
-    );
-  }
-}
 
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       collapse: false,
-
       isWideEnough: false,
       styler: this.props.navstyle
     };
@@ -115,40 +78,18 @@ class NavBar extends React.Component {
                     </NavLink>
                   </NavItem>
                 </NavbarNav>
-                <NavbarNav className="center">
-                  <NavItem id="search">
-                    <div className="searc-container">
-                      <div className="search">
-                        <FontAwesomeIcon
-                          className="search-icon"
-                          icon="search"
-                        />
-                        <input
-                          id="search_input"
-                          className="search_input"
-                          type="search"
-                          placeholder="Que cherchez-vous ?"
-                          autoComplete="on"
-                        />
-                      </div>
-                    </div>
-                  </NavItem>
-                </NavbarNav>
+                
                 <NavbarNav className="right">
                   <NavItem className="menu-utilitaires">
-                    <button
-                      type="button"
-                      className="log-button"
-                      onClick={this.login}
-                    >
-                      Connexion
+                    <button type="button" className="log-button">
+                      <Link to="/log-in" className="log-in">
+                        Connexion
+                      </Link>
                     </button>
-                    <button
-                      type="button"
-                      className="sign-button"
-                      onClick={this.register}
-                    >
-                      Inscrivez-vous
+                    <button type="button" className="sign-button">
+                      <Link to="/register" className="register">
+                        Inscrivez-vous
+                      </Link>
                     </button>
                   </NavItem>
                 </NavbarNav>

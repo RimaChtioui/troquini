@@ -3,16 +3,19 @@ import "./TrocDetail.css";
 import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import SocialMediaLinks from "../SocialMediaLinks/SocialMediaLinks";
+import MessageForm from "../MessageForm/MessageForm";
 
 class TrocDetail extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      troc: this.props.trocList.find(e => e.id == this.props.id)
+      troc: this.props.trocList.find(e => e.troc_id == this.props.id)
     };
   }
 
   render() {
+    console.log(this.props.trocList);
+    console.log(this.state.troc);
     return (
       <Container fluid className="troc-detail-container">
         <Row className="troc-detail-header">
@@ -67,14 +70,7 @@ class TrocDetail extends Component {
                 md="4"
                 lg="4"
               >
-                <Link to="/message-form" className="negociate-btn">
-                  <img
-                    src="/negociate-icon.png"
-                    alt="negociate-icon"
-                    className="negociate-icon"
-                  />
-                  <h5 className="negociate-text">NEGOCIER</h5>
-                </Link>
+                <MessageForm />
               </Col>
             </Row>
           </Col>

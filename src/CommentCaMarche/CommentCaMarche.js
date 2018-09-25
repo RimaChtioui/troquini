@@ -7,7 +7,7 @@ class CommentCaMarche extends Component {
     return (
       <Container>
         <section className="text-center my-5">
-          <h2 className="h1-responsive font-weight-bold my-5">
+          <h2 className="h1-responsive font-weight-bold my-5 title">
             Comment troquer ?
           </h2>
           <p className="grey-text w-responsive mx-auto mb-5">

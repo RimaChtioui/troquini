@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import "./TrocCard.css";
-
 import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import SocialMediaLinks from "../SocialMediaLinks/SocialMediaLinks";
 
 const CardFront = props => {
-  console.log(props.troc);
   return (
     <div className="card-side side-front">
       <div>
@@ -35,7 +33,6 @@ const CardFront = props => {
 };
 
 const CardBack = props => {
-  console.log(props.troc);
   return (
     <div className="card-side side-back">
       <div className="container-fluid">
@@ -50,10 +47,9 @@ const CardBack = props => {
 };
 
 const TrocCard = props => {
-  console.log(props.troc);
   return (
     <Col xs="12" sm="12" md="4" lg="4" className="card-container">
-      <Link to={`/troc-detail/${props.troc.id}`} className="card-body">
+      <Link to={`/troc-detail/${props.troc.troc_id}`} className="card-body">
         <CardFront troc={props.troc} />
         <CardBack troc={props.troc} />
       </Link>

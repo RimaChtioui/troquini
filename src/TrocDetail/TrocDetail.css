@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
 @import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah");
 
-/*Colonne gauche pour la fiche produit*/
+/*Header fiche produit*/
 .troc-detail-container {
   font-family: "PT Sans Caption", sans-serif;
   font-size: 14px;
@@ -17,7 +17,7 @@
   padding: 10px !important;
   justify-content: left;
 }
-
+/*Colonne gauche pour la fiche produit*/
 .troc-detail-column {
   display: flex;
   flex-direction: column;
@@ -69,30 +69,7 @@
   width: 10%;
   height: 10%;
 }
-.troc-button-negociate {
-  margin-bottom: 5px;
-  align-self: center;
-}
-.negociate-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  border: 1px solid rgb(64, 193, 233);
-  border-radius: 10px;
-  color: white;
-  font-family: "Gloria Hallelujah", cursive, serif;
-  background: rgb(64, 193, 233);
-}
 
-.negociate-btn:hover {
-  color: grey;
-}
-
-.negociate-icon {
-  width: 10%;
-  margin-right: 15px;
-}
 .social-media {
   border: 1px solid rgb(131, 130, 130);
   text-align: center;

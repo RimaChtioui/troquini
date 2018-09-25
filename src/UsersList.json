@@ -1,0 +1,35 @@
+[
+  {
+    "user_id": 1,
+    "userFirstName": "Youssef",
+    "userLastName": "Chahed",
+    "userCity": "Tunis",
+    "postalCode": "1057",
+    "userDescription": "J'aime troquer, apprendre de nouvelles choses ,échanger en fonction des envies de chacun( e), découvrir, partager.",
+    "userRating": 5,
+    "trocNbre": 3,
+    "userPhoto": "profile.png"
+  },
+  {
+    "user_id": 2,
+    "userFirstName": "Hafedh",
+    "userLastName": "Caïd Essebsi",
+    "userCity": "Ariana",
+    "postalCode": "2037",
+    "userDescription": "J'aime troquer, apprendre de nouvelles choses ,échanger en fonction des envies de chacun( e), découvrir, partager.",
+    "userRating": 0,
+    "trocNbre": 1,
+    "userPhoto": "profile.png"
+  },
+  {
+    "user_id": 3,
+    "userFirstName": "Rached",
+    "userLastName": "Ghannouchi",
+    "userCity": "Nabeul",
+    "postalCode": "8060",
+    "userDescription": "J'aime troquer, apprendre de nouvelles choses ,échanger en fonction des envies de chacun( e), découvrir, partager.",
+    "userRating": 2,
+    "trocNbre": 2,
+    "userPhoto": "profile.png"
+  }
+]
