@@ -1,95 +1,17 @@
-.modify-part{
-    display: flex;
-    flex-direction: column;
-}
-.describ-editprof{
-    color: rgba(0, 0, 255, 0.5);;
-    font-size: 30px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-left: 20px;
-    margin-top: 100px;
-}
-.input-editprof{
-    width: 29%;
-    height: 157px;
-    margin-left: 20px;
-    margin-top: -23px;
-    border: 3px solid  rgba(0, 0, 255, 0.5);
-}
-/*****geolocalisation****/
-.inputcodepostal{
-    display: flex;
-}
-.codepostaltitle{
-    color: rgba(0, 0, 255, 0.5);;
-    font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-left: 201px;
-    margin-top: -11px;
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
+@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah");
 
-}
-.inputtitle{
-    width: 259px;
-    height: 26px;
-    border: 3px solid  rgba(0, 0, 255, 0.5);
-    margin-left: 5px;
-    margin-top: -17px;
+/*Header fiche produit*/
+#edit-profile-container{ 
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 14px;
+  margin-top: 7rem;
 }
 
-.villetitle{
-    color: rgba(0, 0, 255, 0.5);;
-    font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-left: 265px;
-    margin-top: -11px;
+#edit-profile-header {
+  margin: 5px !important;
+  padding: 10px !important;
+  justify-content: left;
 }
-.numtitle{
-    color: rgba(0, 0, 255, 0.5);;
-    font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-left: 222px;
-    margin-top: -11px;
-}
-.ruetitle{
-    color: rgba(0, 0, 255, 0.5);;
-    font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-left: 270px;
-    margin-top: -11px;
-}
-.ancienmotpasse{
-    color: rgba(0, 0, 255, 0.5);;
-    font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-left: 128px;
-    margin-top: -11px;
-}
-.newpswd{
-    color: rgba(0, 0, 255, 0.5);;
-    font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-left: 116px;
-    margin-top: -11px;  
-}
-.confirmpsd{
-    color: rgba(0, 0, 255, 0.5);;
-    font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-left: 101px;
-    margin-top: -11px;
-}
-.Button{
-    width: 100px;
-    height: 60px;
-    border: 2px  solid blue;
-    border-radius: 20px;
-    margin-top: 9px;
-    margin-left:316px;
-    background-color: rgba(0, 0, 255, 0.5); 
-    color: white;
-}
-.Button :hover{
-    background-color: red; 
-    border: 2px  solid red;
 
-}
