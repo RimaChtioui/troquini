@@ -1,5 +1,6 @@
 import React from "react";
 import "./EditProfile.css";
+import { Container, Row, Col } from "reactstrap";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import Stepper from "@material-ui/core/Stepper";
@@ -72,25 +73,29 @@ class EditProfile extends React.Component {
     const { activeStep } = this.state;
 
     return (
-      <div id="edit-profile-container" className={classes.root}>
-        <div className="edit-profile-header">
+      <Container fluid id="edit-profile-container" className={classes.root}>
+        <Row className="edit-profile-header">
           <h1 className="page-title">Modifier mon profile</h1>
-          <Stepper activeStep={activeStep} alternativeLabel>
-            {steps.map(label => {
-              return (
-                <Step key={label}>
-                  <StepLabel>{label}</StepLabel>
-                </Step>
-              );
-            })}
-          </Stepper>
-          <div>
+        </Row>
+        <Row className="edit-profile-form">
+          <Col xs="12" sm="12" md="12" lg="12" className="edit-profile-stepper">
+            <Stepper activeStep={activeStep} alternativeLabel>
+              {steps.map(label => {
+                return (
+                  <Step key={label}>
+                    <StepLabel>{label}</StepLabel>
+                  </Step>
+                );
+              })}
+            </Stepper>
+          </Col>
+          <Col xs="12" sm="12" md="12" lg="12" className="edit-profile-inputs">
             {this.state.activeStep === steps.length ? (
               <div>
                 <Typography className={classes.instructions}>
-                  All steps completed
+                  Vous avez terminé.
                 </Typography>
-                <Button onClick={this.handleReset}>Reset</Button>
+                <Button onClick={this.handleReset}>Initialiser</Button>
               </div>
             ) : (
               <div>
@@ -103,21 +108,21 @@ class EditProfile extends React.Component {
                     onClick={this.handleBack}
                     className={classes.backButton}
                   >
-                    Back
+                    Retour
                   </Button>
                   <Button
                     variant="contained"
                     color="primary"
                     onClick={this.handleNext}
                   >
-                    {activeStep === steps.length - 1 ? "Finish" : "Next"}
+                    {activeStep === steps.length - 1 ? "Terminé" : "Suivant"}
                   </Button>
                 </div>
               </div>
             )}
-          </div>
-        </div>
-      </div>
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }

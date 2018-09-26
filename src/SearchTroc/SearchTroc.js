@@ -71,9 +71,9 @@ class SearchTroc extends Component {
         <Row>
           <Col className="filter-column" xs="12" sm="12" md="3" lg="3">
             <input
-              className="searchsection"
+              className="search-section"
               type="text"
-              placeholder="seach a troc here"
+              placeholder="Tapez votre recherche ici"
               onChange={this.inputReader}
             />
             <FilterTroc onChange={this.onChange} />

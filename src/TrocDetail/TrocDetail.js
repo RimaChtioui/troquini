@@ -9,12 +9,17 @@ class TrocDetail extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      troc: this.props.trocList.find(e => e.troc_id == this.props.id)
+      troc: []
     };
+  }
+
+  componentDidUpdate{
+    
   }
 
   render() {
     console.log(this.props.trocList);
+  
     console.log(this.state.troc);
     return (
       <Container fluid className="troc-detail-container">

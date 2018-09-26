@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Data from "./Data.json";
+import axios from "axios";
 import UsersList from "./UsersList.json";
 import HomePage from "./HomePage/HomePage";
 import LogIn from "./LogIn/LogIn";
@@ -17,8 +17,32 @@ import EditProfile from "./EditProfile/EditProfile";
 import UserTrocList from "./UserTrocList/UserTrocList";
 
 class App extends Component {
+  constructor(porps) {
+    super(porps);
+    this.state = {
+      Data: [],
+      User: []
+    };
+  }
+  getbase(value) {
+    this.setState({
+      Data: value,
+      User: value
+    });
+  }
+
+  componentDidMount() {
+    axios
+      .get("/trocs")
+      .then(res => this.getbase(res.data))
+      .catch(err => console.log(err));
+  }
+
   render() {
     localStorage.setItem("user_id", "3");
+    if (this.state.Data.length !== 0) {
+      console.log("test", this.state.Data);
+    }
     return (
       <Router>
         <div>
@@ -48,21 +72,24 @@ class App extends Component {
                   <Route path="/add-troc" component={AddTroc} />
                   <Route
                     path="/search-troc"
-                    render={() => <SearchTroc trocList={Data} />}
+                    render={() => <SearchTroc trocList={this.state.Data} />}
                   />
                   <Route
                     path="/troc-detail/:troc_id"
                     render={props => (
                       <TrocDetail
-                        trocList={Data}
-                        id={props.match.params.troc_id}
+                        trocList={this.state.Data}
+                        id={this.state.Data._id}
                       />
                     )}
                   />
                   <Route
                     path="/user-profile"
                     render={() => (
-                      <UserProfile usersList={UsersList} trocList={Data} />
+                      <UserProfile
+                        usersList={UsersList}
+                        trocList={this.state.Data}
+                      />
                     )}
                   />
                   <Route path="/message" component={Message} />

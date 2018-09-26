@@ -49,7 +49,7 @@ const CardBack = props => {
 const TrocCard = props => {
   return (
     <Col xs="12" sm="12" md="4" lg="4" className="card-container">
-      <Link to={`/troc-detail/${props.troc.troc_id}`} className="card-body">
+      <Link to={`/troc-detail/${props.troc._id}`} className="card-body">
         <CardFront troc={props.troc} />
         <CardBack troc={props.troc} />
       </Link>

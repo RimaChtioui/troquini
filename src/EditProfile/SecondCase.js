@@ -74,7 +74,7 @@ class EditProfileSecondCase extends React.Component {
           label="Rue"
           multiline
           rows="4"
-          defaultValue="rue"
+          defaultValue=""
           className={classes.textField}
           margin="normal"
           variant="outlined"
@@ -92,7 +92,7 @@ class EditProfileSecondCase extends React.Component {
               className: classes.menu
             }
           }}
-          helperText="Please select your cities"
+          helperText="Sélectionnez votre ville"
           margin="normal"
           variant="outlined"
         >
