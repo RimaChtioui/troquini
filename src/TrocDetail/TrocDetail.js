@@ -13,13 +13,9 @@ class TrocDetail extends Component {
     };
   }
 
-  componentDidUpdate{
-    
-  }
-
   render() {
     console.log(this.props.trocList);
-  
+
     console.log(this.state.troc);
     return (
       <Container fluid className="troc-detail-container">

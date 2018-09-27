@@ -52,7 +52,7 @@ class UserProfile extends React.Component {
               <Col xs="12" sm="12" md="4" lg="3" className="user-detail-left">
                 <div className="user-detail-left-up">
                   <img
-                    src={"/" + this.state.user.userPhoto}
+                    // src={"/" + this.state.user.userPhoto}
                     alt="user-photo"
                     className="user-photo"
                   />
@@ -93,7 +93,7 @@ class UserProfile extends React.Component {
                     />
                     <h3 className="troc-comma">:</h3>
                     <h3 className="user-troc-nbre">
-                      {this.state.user.trocNbre}
+                      {/* {this.state.user.trocNbre} */}
                     </h3>
                   </Col>
                 </Row>
@@ -101,19 +101,19 @@ class UserProfile extends React.Component {
               <Col xs="12" sm="12" md="8" lg="9" className="user-detail-right">
                 <Row className="user-detail-row user-name">
                   <h4 className="user-name">
-                    {this.state.user.userFirstName} {"  "}
-                    {this.state.user.userLastName}
+                    {/* {this.state.user.userFirstName} {"  "}
+                    {this.state.user.userLastName} */}
                   </h4>
                 </Row>
                 <Row className="user-detail-row user-code-postal">
                   <h5 className="user-city">
-                    {this.state.user.userCity} , {this.state.user.postalCode}
+                    {/* {this.state.user.userCity} , {this.state.user.postalCode} */}
                   </h5>
                 </Row>
                 <Row className="user-detail-row">
                   <h4 className="user-detail-label">Description</h4>
                   <h6 className="user-description">
-                    {this.state.user.userDescription}
+                    {/* {this.state.user.userDescription} */}
                   </h6>
                 </Row>
                 <Row className="user-detail-row">
