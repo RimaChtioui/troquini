@@ -6,18 +6,13 @@ import SocialMediaLinks from "../SocialMediaLinks/SocialMediaLinks";
 import MessageForm from "../MessageForm/MessageForm";
 
 class TrocDetail extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      troc: []
-    };
-  }
-
   render() {
-    console.log(this.props.trocList);
-
-    console.log(this.state.troc);
-    return (
+    const { trocList } = this.props;
+    const troc = trocList.find(el => el._id === this.props.id);
+    console.log(troc);
+    return !troc ? (
+      "Loading..."
+    ) : (
       <Container fluid className="troc-detail-container">
         <Row className="troc-detail-header">
           <h1 className="page-title">Fiche Troc</h1>
@@ -26,30 +21,26 @@ class TrocDetail extends Component {
           <Col className="troc-detail-column" xs="12" sm="12" md="9" lg="9">
             <Row className="troc-detail-up">
               <Col className="troc-photo" xs="12" sm="12" md="4" lg="4">
-                <img src={"/" + this.state.troc.photo} alt="troc-photo" />
+                <img src={"/" + troc.photo} alt="troc-photo" />
               </Col>
               <Col className="troc-description" xs="12" sm="12" md="8" lg="8">
                 <Row>
-                  <h3 className="font-weight-bold font-title">
-                    {this.state.troc.title}
-                  </h3>
+                  <h3 className="font-weight-bold font-title">{troc.title}</h3>
                 </Row>
                 <Row>
                   <h4 className="font-weight-bold font-type">
-                    {this.state.troc.typeO} d'un {this.state.troc.typeS}
+                    {troc.typeO} d'un {troc.typeS}
                   </h4>
                 </Row>
                 <Row>
-                  <h5 className="font-category">{this.state.troc.category}</h5>
-                  <h5 className="font-description">
-                    {this.state.troc.description}
-                  </h5>
+                  <h5 className="font-category">{troc.category}</h5>
+                  <h5 className="font-description">{troc.description}</h5>
                   <h5 className="font-date">
-                    Mis en ligne le : {this.state.troc.dateCreationTroc}
+                    Mis en ligne le : {troc.dateCreationTroc}
                   </h5>
                 </Row>
                 <Row>
-                  <h3 className="font-vues">{this.state.troc.vuesNbre} vues</h3>
+                  <h3 className="font-vues">{troc.vuesNbre} vues</h3>
                 </Row>
               </Col>
             </Row>
@@ -83,21 +74,18 @@ class TrocDetail extends Component {
             lg="3"
           >
             <img
-              src={"/" + this.state.troc.userPhoto}
+              src={"/" + troc.userinfos[0].userPhoto}
               alt="user-photo"
               className="user-photo"
             />
-            <h4 className="user-name">
-              {this.state.troc.userFirstName} {"  "}
-              {this.state.troc.userLastName}
-            </h4>
-            <h5 className="user-city">{this.state.troc.userCity}</h5>
-            <h4 className="postal-code">{this.state.troc.postalCode}</h4>
+            <h4 className="user-name">{troc.userinfos[0].pseudo}</h4>
+            <h5 className="user-city">{troc.userinfos[0].userCity}</h5>
+            <h4 className="postal-code">{troc.userinfos[0].postalCode}</h4>
             <Row className="counter">
               <Col className="counter-troc" xs="12" sm="12" md="11" lg="11">
                 <img src="/carton.jpg" alt="troc-icon" className="troc-icon" />
                 <h3 className="troc-comma">:</h3>
-                <h3 className="troc-nbre">{this.state.troc.trocNbre}</h3>
+                <h3 className="troc-nbre">{troc.userinfos[0].userTrocNbre}</h3>
               </Col>
             </Row>
             <Row className="evaluation">

@@ -9,7 +9,7 @@ class UserProfile extends React.Component {
     super(props);
     this.state = {
       user: this.props.usersList.find(
-        e => e.user_id == localStorage.getItem("user_id")
+        e => e._id == localStorage.getItem("_id")
       ),
       troc: this.props.trocList
     };

@@ -11,6 +11,7 @@ import Typography from "@material-ui/core/Typography";
 import FirstCase from "./FirstCase";
 import SecondCase from "./SecondCase";
 import ThirdCase from "./ThirdCase";
+import axios from "axios";
 
 const styles = theme => ({
   root: {
@@ -44,7 +45,25 @@ function getStepContent(stepIndex) {
 
 class EditProfile extends React.Component {
   state = {
-    activeStep: 0
+    activeStep: 0,
+    isModidified: false
+  };
+
+  componentDidMount() {
+    axios.get("/user/" + this.props.id).then(res =>
+      this.setState({
+        ...res.data
+      })
+    );
+  }
+
+  handleNext = () => {
+    axios.put("/users/" + this.props.id, {
+      activeStep: this.state.activeStep
+    });
+    this.setState({
+      isModidified: true
+    });
   };
 
   handleNext = () => {

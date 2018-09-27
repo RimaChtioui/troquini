@@ -8,6 +8,7 @@ import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import AddIcon from "@material-ui/icons/Add";
+import axios from "axios";
 
 const styles = theme => ({
   button: {
@@ -47,14 +48,26 @@ class AddTroc extends Component {
       photos: value
     });
   };
-
+  
   getTroc() {
     this.props.AddTrocFunction({ ...this.state });
   }
+  // clickHandler() {
+  //   this.getTroc();
+  // }
 
-  clickHandler() {
-    this.getTroc();
-  }
+  clickHandler = () => {
+    axios
+      .post("/Troc", {
+        title: this.state.title,
+        description: this.state.description,
+        photos: this.state.photos
+      })
+      .then(res =>
+        axios.get("/trocs").then(res => this.props.updateUserTrocList(res.data))
+      )
+      .catch(err => alert(err));
+  };
 
   render() {
     const { classes } = this.props;

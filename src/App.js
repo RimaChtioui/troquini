@@ -39,7 +39,7 @@ class App extends Component {
   }
 
   render() {
-    localStorage.setItem("user_id", "3");
+    localStorage.setItem("_id", "5bab978c1f997d1e18eabe8c");
     if (this.state.Data.length !== 0) {
       console.log("test", this.state.Data);
     }
@@ -75,11 +75,11 @@ class App extends Component {
                     render={() => <SearchTroc trocList={this.state.Data} />}
                   />
                   <Route
-                    path="/troc-detail/:troc_id"
+                    path="/troc-detail/:id"
                     render={props => (
                       <TrocDetail
                         trocList={this.state.Data}
-                        id={this.state.Data._id}
+                        id={props.match.params.id}
                       />
                     )}
                   />

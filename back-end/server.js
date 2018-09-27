@@ -23,6 +23,7 @@ app.get("/troc", TrocCrud.geter);
 
 app.get("/", (req, res) => res.send("Hello World"));
 app.get("/users", UserCrud.getUsers);
+app.post("/connect-user", UserCrud.getConnectedUser);
 app.post("/user", UserCrud.addUser);
 
 // Use Routes

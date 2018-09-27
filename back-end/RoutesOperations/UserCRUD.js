@@ -15,6 +15,16 @@ const getUsers = (req, res) => {
   });
 };
 
+const getConnectedUser = (req, res) => {
+  User.find(
+    { email: req.body.email, passWord: req.body.password },
+    (err, data) => {
+      if (err) res.send(err);
+      else res.send(data);
+    }
+  );
+};
+
 const editUser = (req, res) => {
   let userId = req.params.id;
   let editedUser = req.body;
@@ -32,4 +42,4 @@ const deleteUser = (req, res) => {
   });
 };
 
-module.exports = { addUser, getUsers, editUser, deleteUser };
+module.exports = { addUser, getUsers, editUser, deleteUser, getConnectedUser };
