@@ -1,6 +1,15 @@
 import React from "react";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import "./LogIn.css";
+import {
+  Container,
+  Row,
+  Col,
+  Input,
+  Button,
+  Fa,
+  Card,
+  CardBody
+} from "mdbreact";
 import axios from "axios";
 
 class LogIn extends React.Component {
@@ -21,17 +30,44 @@ class LogIn extends React.Component {
   };
   render() {
     return (
-      <div className="login-container">
-        <div>
-          <label> Email </label>
-          <input name="email" onChange={this.onChange} />
-        </div>
-        <div>
-          <label> Password </label>
-          <input name="password" onChange={this.onChange} />
-        </div>
-        <button onClick={this.onLogin}> Log In </button>
-      </div>
+      <Container className="login-container">
+        <Row className="log-in-row">
+          <Col md="6">
+            <Card>
+              <CardBody className="log-in-subcontainer">
+                <form className="log-in-form">
+                  <p className="h4 text-center py-4">Connexion</p>
+                  <div className="grey-text">
+                    <Input
+                      onChange={this.onChange}
+                      label="Votre email"
+                      icon="envelope"
+                      group
+                      type="email"
+                      validate
+                      error="wrong"
+                      success="right"
+                    />
+                    <Input
+                      onChange={this.onChange}
+                      label="Votre mot de passe"
+                      icon="lock"
+                      group
+                      type="password"
+                      validate
+                    />
+                  </div>
+                  <div className="text-center py-4 mt-3">
+                    <Button onClick={this.onLogin} color="cyan" type="submit">
+                      Connectez-vous
+                    </Button>
+                  </div>
+                </form>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }

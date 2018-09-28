@@ -7,4 +7,8 @@
 }
 .category-selection {
   margin: 5px !important;
+  border-color: #ebbf6e;
+  border-radius: 6px;
+  height: 40px;
+  box-shadow: 0 10px 35px rgba(50, 50, 93, 0.1), 0 2px 15px rgba(0, 0, 0, 0.07);
 }

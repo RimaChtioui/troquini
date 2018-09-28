@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
 @import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah");
 
-/*Header fiche produit*/
 #edit-profile-container {
   font-family: "PT Sans Caption", sans-serif;
   font-size: 14px;
@@ -14,9 +13,18 @@
   padding: 10px !important;
 }
 .edit-profile-form {
-
+  display: flex;
   margin: 5px;
   padding-top: 10px;
   box-shadow: 0 10px 35px rgba(50, 50, 93, 0.1), 0 2px 15px rgba(0, 0, 0, 0.07);
   border-radius: 5px;
+}
+.MuiButton-containedPrimary-170 {
+  background-color: rgba(27, 178, 216, 0.949) !important;
+}
+.MuiStepIcon-root-51.MuiStepIcon-active-53 {
+  color: rgb(218, 55, 109) !important;
+}
+.MuiStepIcon-root-51.MuiStepIcon-completed-54 {
+  color: #ebbf6e !important;
 }

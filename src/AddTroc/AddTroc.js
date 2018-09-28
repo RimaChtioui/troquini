@@ -48,7 +48,7 @@ class AddTroc extends Component {
       photos: value
     });
   };
-  
+
   getTroc() {
     this.props.AddTrocFunction({ ...this.state });
   }
@@ -72,7 +72,7 @@ class AddTroc extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <Container fluid className="add-troc-container">
+      <Container className="add-troc-container">
         <Row className="add-troc-header">
           <h1 className="page-title">Ajouter un Troc</h1>
         </Row>
@@ -128,21 +128,21 @@ class AddTroc extends Component {
               <Col className="block" xs="12" sm="12" md="4" lg="4">
                 <a href="#" className="sprites icones">
                   <div className="upload-images-block">
-                    <IconButtons />
+                    <IconButtons color="secondary" />
                   </div>
                 </a>
               </Col>
               <Col className="block" xs="12" sm="12" md="4" lg="4">
                 <a href="#" className="sprites icones">
                   <div className="upload-images-block">
-                    <IconButtons />
+                    <IconButtons color="secondary" />
                   </div>
                 </a>
               </Col>
               <Col className="block" xs="12" sm="12" md="4" lg="4">
                 <a href="#" className="sprites icones">
                   <div className="upload-images-block">
-                    <IconButtons />
+                    <IconButtons color="secondary" />
                   </div>
                 </a>
               </Col>
@@ -152,7 +152,7 @@ class AddTroc extends Component {
         <Row className="add-troc-footer">
           <Button
             variant="fab"
-            color="primary"
+            color="inherit"
             aria-label="Add"
             className={classes.button}
           >

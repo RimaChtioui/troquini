@@ -34,7 +34,7 @@ class MessageForm extends React.Component {
     );
 
     return (
-      <div>
+      <div className="negociate-button">
         <button type="button" onClick={this.toggle} className="negociate-btn">
           <img
             src="/negociate-icon.png"
@@ -48,7 +48,11 @@ class MessageForm extends React.Component {
           toggle={this.toggle}
           className={this.props.className}
         >
-          <ModalHeader toggle={this.toggle} close={closeBtn} className="modal-header">
+          <ModalHeader
+            toggle={this.toggle}
+            close={closeBtn}
+            className="modal-header"
+          >
             Envoyer un message privé
           </ModalHeader>
           <ModalBody>
@@ -58,7 +62,7 @@ class MessageForm extends React.Component {
           <ModalFooter>
             <button
               type="button"
-              className="negociate-btn green-color"
+              className="negociate-btn blue-color"
               onClick={this.toggle}
             >
               Envoyer

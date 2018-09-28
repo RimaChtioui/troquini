@@ -33,20 +33,23 @@
   justify-content: space-between;
 }
 .font-date {
-  color: red;
+  color: rgb(145, 143, 144);
   font-size: 14px;
+  margin: 20px 0px;
 }
 
 .font-type {
-  color: rgb(43, 84, 172);
-  font-family: "Dancing Script", cursive;
+  color: #1bb2d8f2;
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 14px;
 }
 .font-category {
   color: rgb(44, 44, 44);
-  margin: 5px 0px;
+  margin: 20px 0px;
+  font-size: 14px;
 }
 .font-description {
-  color: rgb(150, 149, 149);
+  color: rgb(44, 44, 44);
   font-size: 14px;
   margin: 5px 0px;
 }
@@ -58,29 +61,28 @@
   text-transform: uppercase;
   margin: 5px 0px;
 }
+
+.troc-detail-center {
+  margin: 20px 55px !important;
+}
 .negociate-text {
   margin-bottom: 0px;
 }
+
 .troc-detail-down {
   align-self: flex-end;
+  margin: 5px;
+}
+@media only screen and (max-width: 600px) {
+  .troc-detail-down {
+    align-self: center;
+    margin: 5px;
+  }
 }
 
 .evaluation-icon {
   width: 10%;
   height: 10%;
-}
-
-.social-media {
-  border: 1px solid rgb(131, 130, 130);
-  text-align: center;
-  background: rgb(218, 215, 215);
-  border-radius: 10px;
-  margin-top: 10px;
-}
-
-.social-media-text {
-  margin-top: 15px;
-  font-family: "Gloria Hallelujah", cursive, serif;
 }
 
 /*Colonne Droite pour le profil*/
@@ -123,7 +125,7 @@
 }
 .troc-comma {
   width: 21px;
-  color: brown;
+  color: rgb(218, 55, 109);
   align-self: center;
   text-align: left;
   font-size: 40px;
@@ -131,7 +133,7 @@
 .troc-nbre {
   font-size: 40px;
   align-self: center;
-  color: brown;
+  color: rgb(218, 55, 109);
   text-align: left;
   width: 56px;
 }

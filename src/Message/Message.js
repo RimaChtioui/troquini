@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import "./Message.css";
 import { Container, Row, Col, Button } from "reactstrap";
+import Messages from "./Messages";
 
 class Message extends Component {
-  render() {
+ render() {
     return (
       <Container className="message-container">
         <Row className="message-header">
@@ -22,7 +23,7 @@ class Message extends Component {
                       src="profile.png"
                       alt="avatar"
                       className="avatar rounded-circle d-flex align-self-center z-depth-1"
-                      style={{width:"20%"}}
+                      style={{ width: "20%" }}
                     />
                     <div className="text-small">
                       <strong>L'équipe Trokini</strong>
@@ -42,7 +43,7 @@ class Message extends Component {
                       src="profile.png"
                       alt="avatar"
                       className="avatar rounded-circle d-flex align-self-center z-depth-1"
-                      style={{width:"20%"}}
+                      style={{ width: "20%" }}
                     />
                     <div className="text-small">
                       <strong>Danny Smith</strong>
@@ -201,7 +202,7 @@ class Message extends Component {
               <ul className="list-unstyled chat">
                 <li className="d-flex justify-content-between mb-4">
                   <img
-                    src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6"
+                    src="profile.png"
                     alt="avatar"
                     className="avatar rounded-circle ml-lg-3 ml-0 z-depth-1"
                   />
@@ -245,14 +246,14 @@ class Message extends Component {
                     </p>
                   </div>
                   <img
-                    src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5"
+                    src="profile.png"
                     alt="avatar"
                     className="avatar rounded-circle mr-0 ml-3 z-depth-1"
                   />
                 </li>
                 <li className="d-flex justify-content-between mb-4 pb-3">
                   <img
-                    src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6"
+                    src="profile.png"
                     alt="avatar"
                     className="avatar rounded-circle ml-lg-3 ml-0 z-depth-1"
                   />
@@ -269,25 +270,38 @@ class Message extends Component {
                       </small>
                     </div>
                     <hr className="w-100" />
-                    <p className="mb-0">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.
-                    </p>
+                    <div className="mb-0">
+                      <Messages messages={this.state.messages} />
+                    </div>
                   </div>
                 </li>
                 <li className="white">
                   <div className="form-group basic-textarea">
                     <textarea
                       className="form-control pl-2 my-0"
-                      id="exampleFormControlTextarea2"
+                      id="chatInput"
                       rows="3"
                       placeholder="Type your message here..."
                     />
                   </div>
                 </li>
-                <Button color="info" rounded size="sm" className="float-right">
-                  Send
+                <Button
+                  color="info"
+                  rounded
+                  size="sm"
+                  className="float-right"
+                  onClick={this.sendMessages}
+                >
+                  Envoyer
+                </Button>
+                <Button
+                  color="info"
+                  rounded
+                  size="sm"
+                  className="float-right"
+                  onClick={this.clearMessages}
+                >
+                  Annuler
                 </Button>
               </ul>
             </div>

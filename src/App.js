@@ -12,7 +12,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from "./NavBar/NavBar.js";
 import FooterPage from "./FooterPage/FooterPage";
 import TrocDetail from "./TrocDetail/TrocDetail";
-import Message from "./Message/Message";
+import ChatBox from "./Message/ChatBox";
 import EditProfile from "./EditProfile/EditProfile";
 import UserTrocList from "./UserTrocList/UserTrocList";
 
@@ -20,14 +20,12 @@ class App extends Component {
   constructor(porps) {
     super(porps);
     this.state = {
-      Data: [],
-      User: []
+      Data: []
     };
   }
   getbase(value) {
     this.setState({
-      Data: value,
-      User: value
+      Data: value
     });
   }
 
@@ -39,7 +37,7 @@ class App extends Component {
   }
 
   render() {
-    localStorage.setItem("_id", "5bab978c1f997d1e18eabe8c");
+    localStorage.setItem("id", 1);
     if (this.state.Data.length !== 0) {
       console.log("test", this.state.Data);
     }
@@ -92,9 +90,9 @@ class App extends Component {
                       />
                     )}
                   />
-                  <Route path="/message" component={Message} />
+                  {/* <Route path="/message" component={ChatBox} /> */}
                   <Route path="/edit-profile" component={EditProfile} />
-                  <Route path="/user-troc-list" component={UserTrocList} />
+                  {/* <Route path="/user-troc-list" component={UserTrocList} /> */}
                   <FooterPage />
                 </div>
               )}

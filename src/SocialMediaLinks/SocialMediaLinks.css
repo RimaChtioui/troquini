@@ -1,3 +1,16 @@
+.social-media {
+  border: 1px solid rgb(131, 130, 130);
+  text-align: center;
+  background: white;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.social-media-text {
+  margin-top: 15px;
+  font-family: "Gloria Hallelujah", cursive, serif;
+}
+
 .social-links {
   padding: 0;
   margin-top: 15px;

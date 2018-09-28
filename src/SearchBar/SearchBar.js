@@ -1,53 +1,20 @@
-class Filters extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleChange = this.handleChange.bind(this);
-  }
-  handleChange(e) {
-    const value = e.target[e.target.type === "checkbox" ? "checked" : "value"];
-    const name = e.target.name;
-    let filterObj = {};
-    filterObj[name] = value;
-    this.props.onFilter(filterObj);
-  }
+import React, { Component } from "react";
+import "./SearchBar.css";
+
+class SearchBar extends React.Component {
   render() {
+    console.log(this.props.inputReader);
     return (
-      <NavbarNav className="center">
-        <NavItem id="search">
-          <div className="searc-container">
-            <div className="search">
-              <FontAwesomeIcon className="search-icon" icon="search" />
-              <input
-                id="search_input"
-                className="search_input"
-                type="search"
-                placeholder="Que cherchez-vous ?"
-                autoComplete="on"
-                value={this.props.filterText}
-                name="filterText"
-                onChange={this.handleChange}
-              />
-            </div>
-          </div>
-        </NavItem>
-      </NavbarNav>
+      <form id="search-input" className="search-form">
+        <input
+          className="search-section"
+          type="text"
+          name="searchInput"
+          placeholder="Tapez votre recherche ici"
+          onChange={this.porps.inputReader}
+        />
+      </form>
     );
   }
 }
-
-<NavbarNav className="center">
-  <NavItem id="search">
-    <div className="searc-container">
-      <div className="search">
-        <FontAwesomeIcon className="search-icon" icon="search" />
-        <input
-          id="search_input"
-          className="search_input"
-          type="search"
-          placeholder="Que cherchez-vous ?"
-          autoComplete="on"
-        />
-      </div>
-    </div>
-  </NavItem>
-</NavbarNav>;
+export default SearchBar;

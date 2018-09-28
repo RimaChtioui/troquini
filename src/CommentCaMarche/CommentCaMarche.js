@@ -58,7 +58,7 @@ class CommentCaMarche extends Component {
               <Card
                 className="card-image"
                 style={{
-                  backgroundImage: "url(échane1.png)"
+                  backgroundImage: "url(échange2.jpg)"
                 }}
               >
                 <div className="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded">

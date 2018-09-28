@@ -10,7 +10,7 @@ library.add(faSearch);
 class FilterTroc extends Component {
   render() {
     return (
-      <form className="filter-container">
+      <form id="filterForm" className="filter-container">
         <select
           className="category-selection row"
           name="typeO"

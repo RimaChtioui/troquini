@@ -10,8 +10,9 @@
   margin-bottom: 0px !important;
 }
 .font-color-blue {
-  color: rgb(43, 84, 172);
-  font-family: "Dancing Script", cursive;
+  color: #1bb2d8f2;
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 13px;
   margin-bottom: 7px !important;
 }
 .font-color-grey {
@@ -20,7 +21,7 @@
   margin-bottom: 0px !important;
 }
 .font-color-pink {
-  color: rgb(245, 7, 58);
+  color: rgb(145, 143, 144);
   font-size: 12px;
 }
 
@@ -92,4 +93,3 @@ img {
 .card-form {
   margin-top: 32px;
 }
-

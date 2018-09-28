@@ -19,7 +19,8 @@
   justify-content: center;
 }
 .add-troc-body {
-  margin: 5px !important;
+  margin: 5px 52px !important;
+  padding-top: 10px;
   justify-content: flex-start;
 }
 .add-troc-input,
@@ -55,7 +56,7 @@
 .sub-title-h6 {
   margin: 5px;
   font-weight: bold;
-  color: #ec407a;
+  color: rgb(218, 55, 109);
   font-size: 16px;
 }
 
@@ -107,7 +108,7 @@
 .check-icon {
   -webkit-appearance: none;
   background: white;
-  border: 1px solid #40aceb;
+  border: 1px solid #40aceb !important;
   border-radius: 3px;
   vertical-align: middle;
   padding: 7px !important;
@@ -137,7 +138,7 @@
   top: -14px;
   left: -1px;
   bottom: 5px;
-  color: #ee47ee;
+  color: rgb(218, 55, 109);
 }
 
 .add-form-input {
@@ -187,4 +188,7 @@
 }
 .col {
   padding: 0px !important;
+}
+.MuiIconButton-colorPrimary-16 {
+  color: rgb(218, 55, 109) !important;
 }

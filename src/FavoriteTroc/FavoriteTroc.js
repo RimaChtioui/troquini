@@ -9,7 +9,7 @@ const FavoriteTroc = props => {
       <Col xs="12" sm="12" md="5" lg="5" className="favorite-troc-item">
         <Row>
           <Col xs="5" sm="5" md="5" lg="5" className="fav-troc-img-container">
-            <img src="annonce1.jpg" className="favorite-troc-img" />
+            <img src="/annonce1.jpg" className="favorite-troc-img" />
           </Col>
           <Col xs="7" sm="7" md="7" lg="7" className="side-front-content">
             <h6
@@ -28,7 +28,7 @@ const FavoriteTroc = props => {
               className="font-color-grey"
               style={{ fontSize: "10px", paddingLeft: "2px" }}
             >
-              Youssef Chahed
+              Flen Ben Foulen
             </h6>
           </Col>
         </Row>
@@ -36,7 +36,7 @@ const FavoriteTroc = props => {
       <Col xs="12" sm="12" md="5" lg="5" className="favorite-troc-item">
         <Row>
           <Col xs="5" sm="5" md="5" lg="5" className="fav-troc-img-container">
-            <img src="annonce2.jpg" className="favorite-troc-img" />
+            <img src="/annonce2.jpg" className="favorite-troc-img" />
           </Col>
           <Col xs="7" sm="7" md="7" lg="7" className="side-front-content">
             <h6
@@ -55,7 +55,7 @@ const FavoriteTroc = props => {
               className="font-color-grey"
               style={{ fontSize: "10px", paddingLeft: "2px" }}
             >
-              Hafedh Caïd Essebsi
+              Flena Bent Foulen
             </h6>
           </Col>
         </Row>

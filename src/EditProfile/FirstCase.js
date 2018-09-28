@@ -40,13 +40,22 @@ class EditProfileFirstCase extends React.Component {
     const { classes } = this.props;
 
     return (
-      <form className={classes.container} noValidate autoComplete="off">
+      <form
+        className={classes.container}
+        noValidate
+        autoComplete="off"
+        style={{
+          flexDirection: "column",
+          width: "250px",
+          marginLeft: "15px"
+        }}
+      >
         <TextField
           id="outlined-multiline-static"
           label="Description"
           multiline
           rows="4"
-          defaultValue="changer votre description ici.."
+          placeholder="changer votre description ici.."
           className={classes.textField}
           margin="normal"
           variant="outlined"

@@ -64,7 +64,7 @@
   text-align: center;
 }
 .user-detail-label {
-  color: brown;
+  color: rgb(218, 55, 109);
   font-family: "Dancing Script", cursive;
   font-weight: bold;
   margin: 22px 0px;
@@ -77,6 +77,6 @@
 .user-troc-nbre {
   font-size: 40px;
   align-self: center;
-  color: brown;
+  color: rgb(218, 55, 109);
   text-align: left;
 }

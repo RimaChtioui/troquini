@@ -59,7 +59,15 @@ class EditProfileSecondCase extends React.Component {
     const { classes } = this.props;
 
     return (
-      <form className={classes.container} noValidate autoComplete="off">
+      <form
+        className={classes.container}
+        noValidate
+        autoComplete="off"
+        style={{
+          flexDirection: "column",
+          width: "250px"
+        }}
+      >
         <TextField
           id="outlined-with-placeholder"
           label="N°"

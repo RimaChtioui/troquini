@@ -45,25 +45,15 @@ class TrocDetail extends Component {
               </Col>
             </Row>
             <Row className="troc-detail-center">
-              <Col className="social-media" xs="12" sm="12" md="4" lg="4">
+              <Col className="social-media" xs="12" sm="12" md="5" lg="3">
                 <h6 className="social-media-text">
                   Partagez ce troc avec vos amis :
                 </h6>
                 <SocialMediaLinks />
               </Col>
-              <Col xs="12" sm="12" md="7" lg="7" />
             </Row>
             <Row className="troc-detail-down">
-              <Col xs="12" sm="12" md="7" lg="7" />
-              <Col
-                className="troc-button-negociate"
-                xs="12"
-                sm="12"
-                md="4"
-                lg="4"
-              >
-                <MessageForm />
-              </Col>
+              <MessageForm />
             </Row>
           </Col>
           <Col

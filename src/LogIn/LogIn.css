@@ -1,3 +1,20 @@
-.login-container{
-    margin-top : 170px;
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
+@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah");
+
+.login-container {
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 14px;
+  margin-top: 7rem;
+}
+
+.log-in-subcontainer {
+  border: 1px solid rgba(27, 178, 216, 0.949);
+  border-radius: 6px;
+}
+.log-in-row {
+  justify-content: center !important;
+}
+.log-in-form {
+  padding: 15px !important;
 }

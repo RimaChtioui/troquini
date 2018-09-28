@@ -21,7 +21,7 @@
 .search-section {
   border-radius: 6px;
   margin-top: 20px;
-  border-color: aquamarine;
+  border-color: #1bb2d8f2;
   height: 40px;
 }
 
@@ -32,4 +32,17 @@
 
 .troc-list {
   box-shadow: 0 10px 35px rgba(50, 50, 93, 0.1), 0 2px 15px rgba(0, 0, 0, 0.07);
+}
+
+.reset-button {
+  border-radius: 6px;
+  margin-top: 20px;
+  border-color: #1bb2d8f2;
+  height: 40px;
+  background-color: #1bb2d8f2;
+  display: flex;
+  justify-content: center;
+  margin: 0px 63px;
+  color: white;
+  font-family: "PT Sans Caption", sans-serif;
 }

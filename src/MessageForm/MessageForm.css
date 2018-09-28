@@ -13,20 +13,23 @@
   font-family: "Gloria Hallelujah", cursive, serif;
   background: rgb(64, 193, 233);
 }
+.negociate-button {
+  width: 250px;
+}
 
 .negociate-btn:hover {
-  color: grey;
+  color: rgb(19, 35, 78);
   cursor: pointer;
 }
 
-.green-color {
-  background: rgb(130, 214, 3);
-  border: 1px solid rgb(130, 214, 3);
+.blue-color {
+  background: #ebbf6e;
+  border: 1px solid #ebbf6e;
   width: 100px;
 }
 .red-color {
-  background: rgb(221, 46, 46);
-  border: 1px solid rgb(221, 46, 46);
+  background: rgb(218, 57, 57);
+  border: 1px solid rgb(218, 57, 57);
   width: 100px;
 }
 .negociate-icon {

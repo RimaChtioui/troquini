@@ -98,7 +98,7 @@ class EditProfile extends React.Component {
         </Row>
         <Row className="edit-profile-form">
           <Col xs="12" sm="12" md="12" lg="12" className="edit-profile-stepper">
-            <Stepper activeStep={activeStep} alternativeLabel>
+            <Stepper color="secondary" activeStep={activeStep} alternativeLabel>
               {steps.map(label => {
                 return (
                   <Step key={label}>
@@ -114,14 +114,20 @@ class EditProfile extends React.Component {
                 <Typography className={classes.instructions}>
                   Vous avez terminé.
                 </Typography>
-                <Button onClick={this.handleReset}>Initialiser</Button>
+                <Button onClick={this.handleReset} style={{ color: "twitter" }}>
+                  Initialiser
+                </Button>
               </div>
             ) : (
               <div>
                 <Typography className={classes.instructions}>
                   {getStepContent(activeStep)}
                 </Typography>
-                <div>
+                <div
+                  style={{
+                    margin: "15px"
+                  }}
+                >
                   <Button
                     disabled={activeStep === 0}
                     onClick={this.handleBack}

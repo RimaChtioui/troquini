@@ -33,6 +33,8 @@ class SearchTroc extends Component {
       category: "",
       userCity: ""
     };
+    this.initialState = this.state;
+    console.log(this.initialState);
   }
 
   inputReader = event => {
@@ -46,6 +48,12 @@ class SearchTroc extends Component {
     });
   };
 
+  clearFilters = e => {
+    document.getElementById("filterForm").reset();
+    
+
+    this.setState(this.initialState);
+  };
   render() {
     let filtredTrocList = this.props.trocList
       .filter(
@@ -71,12 +79,17 @@ class SearchTroc extends Component {
         <Row>
           <Col className="filter-column" xs="12" sm="12" md="3" lg="3">
             <input
+              id="search-input"
               className="search-section"
               type="text"
               placeholder="Tapez votre recherche ici"
               onChange={this.inputReader}
+              value={this.state.searchInput}
             />
             <FilterTroc onChange={this.onChange} />
+            <button type="reset" onClick={this.clearFilters} className="reset-button">
+              Initialiser
+            </button>
           </Col>
           <Col className="troc-list" xs="12" sm="12" md="9" lg="9">
             {filtredTrocList.length > 0 ? (

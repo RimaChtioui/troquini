@@ -6,7 +6,7 @@ class HomePage extends Component {
   render() {
     return (
       <div>
-        <img src="/back1.jpg" style={{ width: "100%" }} alt="nav-back" />
+        <img src="/fond3.jpg" style={{ width: "100%" }} alt="nav-back" />
         <CommentCaMarche />
         <LastTrocs />
       </div>
